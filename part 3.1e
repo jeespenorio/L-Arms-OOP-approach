@@ -1,0 +1,50 @@
+arms_template = Arms(
+    make='CAN-AM',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 706201607, 706201861',
+    position='LEFT',
+    mpn='AC-08214L',
+    sku='990502'
+)
+
+list_models = [
+    
+'Maverick 1000R' ,
+'Maverick 1000R DPS' ,
+'Maverick 1000R Turbo' ,
+'Maverick 1000R Turbo X ds' ,
+'Maverick 1000R Turbo X rs' ,
+'Maverick 1000R X ds' ,
+'Maverick 1000R X mr' ,
+'Maverick 1000R X mr DPS' ,
+'Maverick 1000R X rs' ,
+'Maverick 1000R X rs DPS' ,
+'Maverick 1000R X xc' ,
+'Maverick 1000R X xc DPS' ,
+'Maverick 1000R XC' ,
+'Maverick 1000R xc DPS' ,
+'Maverick Max 1000R' ,
+'Maverick Max 1000R DPS' ,
+'Maverick Max 1000R Turbo' ,
+'Maverick Max 1000R Turbo X ds' ,
+'Maverick Max 1000R Turbo X rs' ,
+'Maverick Max 1000R X ds' ,
+'Maverick Max 1000R X mr' ,
+'Maverick Max 1000R X rs DPS' ,
+
+
+
+
+
+]
+
+years = list(range(2013, 2019))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
