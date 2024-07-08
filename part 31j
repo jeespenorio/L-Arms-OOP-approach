@@ -1,0 +1,44 @@
+arms_template = Arms(
+    make='CAN-AM',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 51360-HL4-A00,  51360-HL4-F00ZB',
+    position='LEFT',
+    mpn='AC-08216L',
+    sku='990504'
+)
+
+list_models = [
+    
+'SXS1000M3 Pioneer 1000' ,
+'SXS1000M3 Pioneer 1000 Deluxe' ,
+'SXS1000M3 Pioneer 1000 EPS' ,
+'SXS1000M3 Pioneer 1000 Forest' ,
+'SXS1000M3 Pioneer 1000 Limited Edition' ,
+'SXS1000M3 Pioneer 1000 Special Edition' ,
+'SXS1000M3 Pioneer 1000 Trail' ,
+'SXS1000M5 Pioneer 1000-5' ,
+'SXS1000M5 Pioneer 1000-5 Deluxe' ,
+'SXS1000M5 Pioneer 1000-5 Forest' ,
+'SXS1000M5 Pioneer 1000-5 Limited Edition' ,
+'SXS1000M5 Pioneer 1000-5 Special Edition' ,
+'SXS1000M5 Pioneer 1000-5 Trail' ,
+'SXS700M4 Pioneer 700-4 Deluxe' ,
+
+
+
+
+
+
+
+]
+
+years = list(range(2016, 2022))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
