@@ -1,0 +1,75 @@
+arms_template = Arms(
+    make='POLARIS',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 2202906',
+    position='LEFT',
+    mpn='AC-08201L',
+    sku='999818'
+)
+
+list_models = [
+    'Sportsman 400' ,
+    'Sportsman 400 4x4' ,
+    'Sportsman 400 HO' ,
+    'Sportsman 400 HO South Edition' ,
+    'Sportsman 400L' ,
+    'Sportsman 450' ,
+    'Sportsman 450 HO' ,
+    'Sportsman 450 HO EPS' ,
+    'Sportsman 450 HO Utility' ,
+    'Sportsman 450 HO Utility Edition' ,
+    'Hawkeye 2x4' ,
+    'Sportsman 500 HO' ,
+    'Sportsman 500 HO DUSE' ,
+    'Sportsman 500 HO Polaris Pursuite LE' ,
+    'Sportsman 500 HO RSE' ,
+    'Sportsman 500 HO Touring' ,
+    'Sportsman 500 EFI' ,
+    'Sportsman 500 EFI Deluxe' ,
+    'Sportsman 500 EFI Touring' ,
+    'Sportsman 500 EFI X2' ,
+    'Sportsman 500 EFI X2 Deluxe' ,
+    'Sportsman Forest 500' ,
+    'Sportsman Forest Tractor 500' ,
+    'Sportsman 570' ,
+    'Sportsman 570 6x6' ,
+    'Sportsman 570 Big Boss 6x6 EPS' ,
+    'Sportsman 570 EPS' ,
+    'Sportsman 570 EPS Utility' ,
+    'Sportsman 570 EPS Utility Edition' ,
+    'Sportsman 570 Hunt Edition' ,
+    'Sportsman 570 Hunter Edition' ,
+    'Sportsman 570 Premium' ,
+    'Sportsman 570 Ride Command Edition' ,
+    'Sportsman 570 SP' ,
+    'Sportsman 570 SP Hunters Edition' ,
+    'Sportsman 570 Touring' ,
+    'Sportsman 570 Touring EPS' ,
+    'Sportsman 570 Touring Premium' ,
+    'Sportsman 570 Touring SP' ,
+    'Sportsman 570 Trail' ,
+    'Sportsman 570 Ultimate Trail LE' ,
+    'Sportsman 570 Utility HD' ,
+    'Sportsman 570 Utility HD LE' ,
+    'Sportsman 570 X2' ,
+    'Sportsman 570 X2 EPS' ,
+    'ACE 570' ,
+    'ACE 570 EPS' ,
+    'ACE 570 SP' ,
+    'Sportsman ACE 570' ,
+    'Sportsman ACE 570 SP' ,
+    'Sportsman Forest 800' ,
+    'Sportsman Forest 800 6x6' ,
+
+]
+
+years = list(range(2005, 2016))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
