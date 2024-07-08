@@ -1,0 +1,25 @@
+class ArmsGenerator:
+    def __init__(self, arms_template, list_models, years):
+        self.arms_template = arms_template
+        self.list_models = list_models
+        self.years = years
+        
+    def generate_arms(self):
+        data = []
+        for model in self.list_models:
+            for year in self.years:
+                arms_data = {
+                    'Make': self.arms_template.make,
+                    'Model': model,
+                    'Vendor': self.arms_template.vendor,
+                    'Vendor_Notes': self.arms_template.vendor_notes,
+                    'Vendor_Code': self.arms_template.vendor_code,
+                    'MPN': self.arms_template.mpn,
+                    'SKU': self.arms_template.sku,
+                    'Position': self.arms_template.position,
+                    'Product_Type': self.arms_template.product_type,
+                    'Year': year
+                }
+                data.append(arms_data)
+        return pd.DataFrame(data)
+    
