@@ -1,0 +1,71 @@
+arms_template = Arms(
+    make='ARCTIC CAT',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 1021416-458',
+    position='LEFT',
+    mpn='AC-08213L',
+    sku='990500'
+)
+
+list_models = [
+    
+'RZR 900' ,
+'RZR 900 EPS' ,
+'RZR 900 EPS LE' ,
+'RZR 900 EPS Trail' ,
+'RZR 900 EPS Trail Fox Edition LE' ,
+'RZR 900 EPS XC Edition' ,
+'RZR 900 Fox Edition' ,
+'RZR 900 Premium' ,
+'RZR 900 XC Edition' ,
+'General 1000' ,
+'General 1000 Deluxe' ,
+'General 1000 Deluxe Ride Command Edition' ,
+'General 1000 EPS' ,
+'General 1000 EPS Deluxe' ,
+'General 1000 EPS Hunter Edition' ,
+'General 1000 EPS Limited Edition' ,
+'General 1000 EPS Premium' ,
+'General 1000 EPS Ride Command Edition' ,
+'General 1000 Premium' ,
+'General 1000 Sport' ,
+'General 4 1000' ,
+'General 4 1000 Deluxe' ,
+'General 4 1000 Deluxe Ride Command Edition' ,
+'General 4 1000 EPS' ,
+'General 4 1000 EPS Ride Command Edition' ,
+'General 4 1000 Premium' ,
+'Ranger XP 1000' ,
+'Ranger XP 1000 Big Game Edition' ,
+'Ranger XP 1000 EPS' ,
+'Ranger XP 1000 EPS 20th Anniversary' ,
+'Ranger XP 1000 EPS High Lifter Edition' ,
+'Ranger XP 1000 EPS Hunter Edition' ,
+'Ranger XP 1000 EPS Northstar HVAC Edition' ,
+'Ranger XP 1000 EPS Premium' ,
+'Ranger XP 1000 EPS Ranch Edition' ,
+'Ranger XP 1000 High Lifter Edition' ,
+'Ranger XP 1000 NorthStar Edition' ,
+'Ranger XP 1000 NorthStar Edition Trail Boss' ,
+'Ranger XP 1000 NorthStar Premium' ,
+'Ranger XP 1000 NorthStar Ultimate' ,
+'Ranger XP 1000 Premium' ,
+'Ranger XP 1000 Texas Edition' ,
+'Ranger XP 1000 Trail Boss' ,
+'Ranger XP 1000 Waterfowl Edition' ,
+
+
+
+
+]
+
+years = list(range(2016, 2023))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
