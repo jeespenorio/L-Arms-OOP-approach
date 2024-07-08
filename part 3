@@ -1,0 +1,24 @@
+arms_template = Arms(
+    make='POLARIS',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 1542161-067, 1542161-458',
+    position='LEFT',
+    mpn='AC-08200L',
+    sku='999816'
+)
+
+list_models = [
+    'Sportsman 450 HO',
+    'Sportsman 450 HO EPS'
+]
+
+years = list(range(2016, 2023))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
