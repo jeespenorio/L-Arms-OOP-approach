@@ -1,0 +1,56 @@
+arms_template = Arms(
+    make='CAN-AM',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 706200742',
+    position='LEFT',
+    mpn='AC-08215L',
+    sku='990492'
+)
+
+list_models = [
+    
+'Commander 800R' ,
+'Commander 800R DPS' ,
+'Commander 800R XT' ,
+'Commander Max 800R DPS' ,
+'Commander 1000' ,
+'Commander 1000 DPS' ,
+'Commander 1000 Limited' ,
+'Commander 1000 Mossy Oak Hunting Edition' ,
+'Commander 1000 X' ,
+'Commander 1000 XT' ,
+'Commander 1000 XT-P' ,
+'Commander 1000R DPS' ,
+'Commander 1000R Limited' ,
+'Commander 1000R Mossy Oak Hunting Edition' ,
+'Commander 1000R X mr' ,
+'Commander 1000R XT' ,
+'Commander 1000R XT-P' ,
+'Commander Max 1000R DPS' ,
+'Commander Max 1000R Limited' ,
+'Commander Max 1000R X mr' ,
+'Commander Max 1000R XT' ,
+'Commander Max 1000R XT-P' ,
+'Commander Max 1000 DPS' ,
+'Commander Max 1000 Limited' ,
+'Commander Max 1000 XT' ,
+'Commander Max 700 DPS' ,
+'Commander Max 700 XT' ,
+
+
+
+
+
+
+]
+
+years = list(range(2011, 2021))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
