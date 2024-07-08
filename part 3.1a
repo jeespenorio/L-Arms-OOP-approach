@@ -1,0 +1,40 @@
+arms_template = Arms(
+    make='ARCTIC CAT',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 1018206-458',
+    position='LEFT',
+    mpn='AC-08212L',
+    sku='990498'
+)
+
+list_models = [
+    
+'Ranger RZR 570 EPS Trail LE' ,
+'RZR 570 EPS Trail' ,
+'RZR 570 EPS Trail LE' ,
+'RZR 570 Trail' ,
+'Ranger RZR 800' ,
+'Ranger RZR 800 EPS' ,
+'Ranger RZR 800 EPS LE' ,
+'Ranger RZR 800 LE' ,
+'Ranger RZR 800 S' ,
+'Ranger RZR 800 S LE' ,
+'Ranger RZR 800 SW Military' ,
+'RZR 800' ,
+'RZR 800 EPS LE' ,
+'RZR 800 XC Edition' ,
+
+
+
+]
+
+years = list(range(2008, 2023))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
