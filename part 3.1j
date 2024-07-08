@@ -1,0 +1,36 @@
+arms_template = Arms(
+    make='CAN-AM',
+    model='All Types of Models',
+    year=None,
+    product_type='FRONT LOWER A-ARM',
+    vendor='NACH',
+    vendor_code='NACH International',
+    vendor_notes='OEM# 5UG-F357A-00',
+    position='LEFT',
+    mpn='AC-08217L',
+    sku='990494'
+)
+
+list_models = [
+    
+'YXR45F Rhino 450' ,
+'YXR45F Rhino 450 Special Edition' ,
+'YXR66F Rhino 660' ,
+'YXR66F Rhino 660 Ducks Unlimited' ,
+'YXR66F Rhino 660 Exploring Edition' ,
+'YXR66F Rhino 660 Special Edition' ,
+'YXR66F Rhino 660 Sport Edition' ,
+'YXR700F Rhino 700 FI' ,
+'YXR700F Rhino 700 FI Ducks Unlimited' ,
+'YXR700F Rhino 700 FI Special Edition' ,
+'YXR700F Rhino 700 FI Sport Edition' ,
+
+
+]
+
+years = list(range(2004, 2014))
+
+generator = ArmsGenerator(arms_template, list_models, years)
+final_df = generator.generate_arms()
+
+final_df
