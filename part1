@@ -1,0 +1,28 @@
+import pandas as pd
+
+class Arms:
+    def __init__(self, make, model, year, mpn, sku, position, product_type, vendor, vendor_code, vendor_notes):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.mpn = mpn
+        self.sku = sku
+        self.position = position
+        self.product_type = product_type
+        self.vendor = vendor
+        self.vendor_notes = vendor_notes
+        self.vendor_code = vendor_code
+        
+    def to_dict(self):
+        return {
+            'Make': [self.make],
+            'Model': [self.model],
+            'Vendor': [self.vendor],
+            'Vendor_Code': [self.vendor_code],
+            'Product_Type': [self.product_type],
+            'Vendor_Notes': [self.vendor_notes],
+            'Year': [self.year],
+            'MPN': [self.mpn],
+            'SKU': [self.sku],
+            'Position': [self.position]
+        }
